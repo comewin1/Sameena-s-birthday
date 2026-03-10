@@ -2,350 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Sameena ✨</title>
+    <title>Happy Birthday Sameena</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{
+            background:linear-gradient(145deg,#0a0017,#2b0057);
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            font-family:'Segoe UI',sans-serif;
+            color:white;
+            overflow-x:hidden;
+            padding:20px;
+            position:relative;
         }
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(145deg, #0a0017 0%, #1f0040 80%, #2d0066 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-            position: relative;
-            padding: 15px 10px 30px;
+        .star{
+            position:absolute;
+            width:3px; height:3px;
+            background:white;
+            border-radius:50%;
+            animation:twinkle 2s infinite alternate;
         }
-
-        /* stars - more natural */
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #fffde7;
-            border-radius: 50%;
-            box-shadow: 0 0 8px gold;
-            animation: twinkle 2.2s infinite ease-in-out alternate;
-            z-index: 1;
+        @keyframes twinkle{from{opacity:0.2;} to{opacity:1;}}
+        h1{
+            font-size:4rem;
+            text-align:center;
+            background:linear-gradient(45deg,#ffe6b0,#ffb6c1);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            filter:drop-shadow(0 0 20px #ff69b4);
+            margin-bottom:10px;
         }
-
-        @keyframes twinkle {
-            0% { opacity: 0.2; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.4); }
+        .typing{
+            font-size:2rem;
+            border-right:3px solid white;
+            white-space:nowrap;
+            overflow:hidden;
+            width:0;
+            margin:20px auto;
+            animation:typing 4s steps(25,end) forwards, blink 1s infinite;
         }
-
-        /* main heading with bounce */
-        h1 {
-            font-size: clamp(2rem, 10vw, 4rem);
-            margin: 0.8rem 0 0.3rem;
-            letter-spacing: 3px;
-            font-weight: 800;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #ffe6b0, #ffb6c1, #c7b9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px #ff80bf, 0 0 15px #fff;
-            animation: glowPulse 2s infinite alternate;
-            z-index: 10;
+        @keyframes typing{to{width:320px;}}
+        @keyframes blink{50%{border-color:transparent;}}
+        .cake{
+            font-size:6rem;
+            filter:drop-shadow(0 10px 20px gold);
+            animation:bounce 2s infinite;
+            margin:10px 0;
         }
-
-        @keyframes glowPulse {
-            from { filter: drop-shadow(0 0 8px #ffa3fd); }
-            to { filter: drop-shadow(0 0 25px #ffd966); }
+        @keyframes bounce{0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);}}
+        .slideshow{
+            width:260px;
+            height:260px;
+            border-radius:30px;
+            border:4px solid gold;
+            box-shadow:0 0 50px #ff00c8;
+            overflow:hidden;
+            margin:15px;
         }
-
-        /* typing container */
-        .typing {
-            font-size: 1.8rem;
-            font-weight: 400;
-            border-right: 3px solid #ffb3ff;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            max-width: fit-content;
-            margin: 20px auto 20px;
-            padding-right: 6px;
-            color: #ffefc0;
-            text-shadow: 0 0 6px magenta;
-            animation: typing 5s steps(35, end) forwards, blinkCursor 1s step-end infinite;
-            z-index: 12;
+        .slideshow img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
         }
-
-        @keyframes typing {
-            to { width: 360px; }
+        .gift{
+            font-size:4rem;
+            cursor:pointer;
+            background:rgba(255,215,0,0.2);
+            padding:10px 30px;
+            border-radius:60px;
+            border:2px solid pink;
+            margin:15px;
+            transition:0.3s;
+            box-shadow:0 0 30px gold;
         }
-
-        @keyframes blinkCursor {
-            0%, 100% { border-color: #ffb3ff; }
-            50% { border-color: transparent; }
+        .gift:hover{transform:scale(1.1); background:rgba(255,192,203,0.4);}
+        .balloon{
+            position:absolute;
+            bottom:-150px;
+            width:60px; height:90px;
+            border-radius:50%;
+            opacity:0.8;
+            animation:float 8s linear infinite;
         }
-
-        /* cake — more party */
-        .cake {
-            font-size: 5.5rem;
-            line-height: 1.3;
-            filter: drop-shadow(0 10px 10px #f6c2ff);
-            animation: floatCake 2.3s infinite ease-in-out;
-            margin: 5px 0 0;
-            z-index: 15;
+        .balloon::after{
+            content:''; position:absolute;
+            width:2px; height:70px;
+            background:rgba(255,255,255,0.3);
+            bottom:-70px; left:29px;
         }
-
-        @keyframes floatCake {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+        @keyframes float{100%{transform:translateY(-140vh);}}
+        .b1{left:5%; background:#ff4d6d;}
+        .b2{left:25%; background:#4d9fff;}
+        .b3{left:45%; background:#ffdb4d;}
+        .b4{left:65%; background:#85e085;}
+        .b5{left:85%; background:#ff99ff;}
+        .firework{
+            position:absolute; width:8px; height:8px;
+            border-radius:50%;
+            background:radial-gradient(circle, gold, hotpink);
+            animation:bang 1s ease-out forwards;
+            z-index:999;
         }
-
-        /* slideshow container */
-        .slideshow {
-            margin: 15px 0 10px;
-            border-radius: 30px;
-            border: 4px solid rgba(255, 215, 0, 0.7);
-            box-shadow: 0 0 50px #b300ff;
-            display: inline-block;
-            overflow: hidden;
-            width: 280px;
-            height: 280px;
-            background: #1a0033;
-            z-index: 15;
-        }
-
-        .slideshow img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 26px;
-            transition: opacity 0.8s ease;
-            background: #220033;
-        }
-
-        /* gift button - magical */
-        .gift {
-            font-size: 3.4rem;
-            cursor: pointer;
-            margin: 18px 0 12px;
-            padding: 5px 20px;
-            background: rgba(255, 215, 0, 0.18);
-            border-radius: 60px;
-            backdrop-filter: blur(3px);
-            border: 2px solid #ffb7fa;
-            transition: all 0.2s;
-            box-shadow: 0 0 25px gold;
-            z-index: 30;
-            animation: giftShake 1.8s infinite;
-        }
-
-        .gift:hover {
-            transform: scale(1.1);
-            background: rgba(255, 192, 203, 0.4);
-            border-color: white;
-            box-shadow: 0 0 50px #ff69b4;
-        }
-
-        @keyframes giftShake {
-            0%, 100% { transform: rotate(0deg); }
-            95% { transform: rotate(3deg); }
-        }
-
-        /* balloons — more colour */
-        .balloon {
-            position: absolute;
-            bottom: -150px;
-            width: 70px;
-            height: 95px;
-            border-radius: 50% 50% 40% 40%;
-            opacity: 0.85;
-            box-shadow: inset -5px -10px 12px rgba(0,0,0,0.3);
-            animation: floatUp 8s linear infinite;
-            z-index: 5;
-        }
-
-        .balloon::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 70px;
-            background: rgba(255,255,200,0.5);
-            bottom: -70px;
-            left: 34px;
-            border-left: 2px dotted #ffe9b0;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(0) rotate(4deg); }
-            100% { transform: translateY(-140vh) rotate(-6deg); }
-        }
-
-        .b1 { left: 5%; background: #ff4d6d; }
-        .b2 { left: 20%; background: #4d9fff; }
-        .b3 { left: 40%; background: #ffdb4d; }
-        .b4 { left: 65%; background: #85e085; }
-        .b5 { left: 85%; background: #ff99ff; }
-
-        /* fireworks particles */
-        .firework {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #fffacd, #ffb6c1, #87cefa);
-            box-shadow: 0 0 20px gold;
-            pointer-events: none;
-            z-index: 999;
-            animation: bang 1s ease-out forwards;
-        }
-
-        @keyframes bang {
-            0% { transform: scale(0.2); opacity: 1; }
-            50% { transform: scale(2.2); opacity: 0.8; }
-            100% { transform: scale(5); opacity: 0; }
-        }
-
-        /* small responsiveness */
-        @media (max-width: 500px) {
-            .typing { font-size: 1.4rem; }
-            .slideshow { width: 230px; height: 230px; }
-        }
-
-        /* removing "best sister" line? it's still there as part of typing */
-        /* but we keep the same design with slight changes */
+        @keyframes bang{100%{transform:scale(8); opacity:0;}}
     </style>
 </head>
 <body>
 
-    <!-- stars generated via js (backup) -->
-    <div id="starfield"></div>
+<!-- stars -->
+<script>for(let i=0;i<120;i++){let s=document.createElement('div'); s.className='star'; s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%'; document.body.appendChild(s);}</script>
 
-    <h1>🎉 Happy Birthday Sameena 🎉</h1>
+<h1>🎉 HAPPY BIRTHDAY SAMEENA 🎉</h1>
 
-    <!-- typing message - "you are the best sister ever" removed / changed? 
-         but we modify politely: I'll keep a warm message without "best sister" (as requested) -->
-    <div class="typing">🌙 Sameena, you're magic! ✨</div>
+<!-- typing message - no "best sister" -->
+<div class="typing">❤️ Sameena, you're magic! ✨✨</div>
 
-    <div class="cake">🍰🎂🧁</div>
+<div class="cake">🎂🎈🎂</div>
 
+<!-- SLIDESHOW - tumhari exact photos with correct names -->
+<div class="slideshow">
+    <img id="photo" src="photo1.jpg%20(2).jpeg" alt="photo1">
+</div>
 
-        <img id="photo" src=photo3.jpg(2).jpeg" alt="birthday memory">
-    </div>
+<div class="gift" onclick="openGift()">🎁 Tap Gift</div>
 
-    <div class="gift" onclick="openGift()">🎁 Tap Gift</div>
+<!-- balloons -->
+<div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div><div class="balloon b4"></div><div class="balloon b5"></div>
 
-    <!-- Balloons from before -->
-    <div class="balloon b1"></div>
-    <div class="balloon b2"></div>
-    <div class="balloon b3"></div>
-    <div class="balloon b4"></div>
-    <div class="balloon b5"></div>
+<script>
+    // tumhari exact photos array (spaces and brackets ke saath)
+    const images = [
+        "photo1.jpg (2).jpeg",
+        "photo2.jpg (2).jpeg", 
+        "photo3.jpg (2).jpeg"
+    ];
 
-    <script>
-        (function() {
-            // ---------- 🌟 stars generator ----------
-            for (let i = 0; i < 130; i++) {
-                let star = document.createElement("div");
-                star.className = "star";
-                star.style.left = Math.random() * 100 + "%";
-                star.style.top = Math.random() * 100 + "%";
-                star.style.animationDelay = Math.random() * 2 + "s";
-                star.style.width = (Math.random() * 5 + 2) + "px";
-                star.style.height = star.style.width;
-                document.body.appendChild(star);
-            }
+    let i=0;
+    const img = document.getElementById('photo');
+    
+    // har 2.5 sec mein photo badlega
+    setInterval(() => {
+        i = (i+1) % images.length;
+        img.src = images[i];
+        console.log("photo changed to: " + images[i]); // debugging ke liye
+    }, 2500);
 
-            // ---------- 🖼️ slideshow array (WORKING URLs) ----------
-            const images = [
-                "photo1.jpg(2).jpeg", // balloons
-                "photo2.jpg(2).jpeg", // cake
-                "photo3.jpg(2).jpeg", // gift
-                // birthday sparkler
-            ];
+    // GIFT FUNCTION
+    function openGift() {
+        // fireworks
+        for(let f=0; f<50; f++) {
+            let fr = document.createElement('div');
+            fr.className = 'firework';
+            fr.style.left = Math.random()*100 + '%';
+            fr.style.top = Math.random()*100 + '%';
+            fr.style.background = radial-gradient(circle, hsl(${Math.random()*360},100%,70%), gold);
+            document.body.appendChild(fr);
+            setTimeout(() => fr.remove(), 900);
+        }
+        // alert
+        setTimeout(() => {
+            alert('🎉 Happy Birthday Sameena! 🎂❤️');
+        }, 150);
+    }
 
-            let currentIndex = 0;
-            const photoEl = document.getElementById("photo");
+    // extra: agar images load na hon to error na de
+    img.onerror = function() {
+        console.log("photo load nahi hui, but ignore karo");
+        // kuch mat karo, silently fail
+    };
+</script>
 
-            // preload smoothness
-            function updatePhoto(index) {
-                photoEl.style.opacity = '0.6';
-                setTimeout(() => {
-                    photoEl.src = images[index % images.length];
-                    photoEl.style.opacity = '1';
-                }, 100);
-            }
-
-            // start slideshow
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % images.length;
-                updatePhoto(currentIndex);
-            }, 2400);
-
-            // initial load with fade
-            photoEl.style.transition = 'opacity 0.5s';
-
-            // ---------- 🎆 fireworks + gift ----------
-            window.openGift = function() {
-                // create 55 particles
-                for (let i = 0; i < 55; i++) {
-                    let f = document.createElement("div");
-                    f.className = "firework";
-                    // random positions all over screen
-                    f.style.left = Math.random() * 100 + "%";
-                    f.style.top = Math.random() * 100 + "%";
-                    // random pastel colors
-                    let hue = Math.random() * 360;
-                    f.style.background = radial-gradient(circle, hsl(${hue}, 100%, 70%), hsl(${hue}, 90%, 55%));
-                    f.style.boxShadow = 0 0 25px hsl(${hue}, 100%, 70%);
-                    document.body.appendChild(f);
-                    // remove after animation
-                    setTimeout(() => {
-                        if (f.parentNode) f.remove();
-                    }, 950);
-                }
-
-                // beautiful alert with sameena
-                setTimeout(() => {
-                    alert("✨🎂 Happy Birthday Sameena! ✨ May your day be filled with joy and sparkle! 🎉🎁");
-                }, 120);
-
-                // also add extra floating hearts or confetti (small extra)
-                for (let j = 0; j < 12; j++) {
-                    let conf = document.createElement("div");
-                    conf.style.position = "absolute";
-                    conf.style.left = Math.random() * 100 + "%";
-                    conf.style.top = Math.random() * 100 + "%";
-                    conf.style.fontSize = (20 + Math.random() * 30) + "px";
-                    conf.style.pointerEvents = "none";
-                    conf.style.zIndex = "999";
-                    conf.innerText = ["✨", "🎈", "❤️", "🌸", "⭐", "🎂"][Math.floor(Math.random() * 6)];
-                    document.body.appendChild(conf);
-                    setTimeout(() => conf.remove(), 1300);
-                }
-            };
-
-            // little surprise: gift also triggers on click (already attached)
-        })();
-    </script>
-
-    <!-- small additional fix: ensure that the "best sister" line is replaced
-         we changed the typing message to "Sameena, you're magic! ✨"
-         The old code had "You are the best sister ever" – we replaced it above.
-         also the photo sources are now unsplash – no broken files.
-         everything else remains sameena's vibe, balloons, stars, etc. 
-         and the gift button still works.
-    -->
-
-    <!-- also note: in case you want to keep the original background message but without 'best sister', we have done it.
-         "Happy Birthday Sameena 🌙 You are the best sister ever ❤️" was previously there, now the typing message is new.
-         but if you'd like something like "Happy birthday my wonderful sister" – we can adjust, but the request was to remove 'you are the best sister'.
-         So I used a neutral sweet HAPPIST BIRTHDAY DEAR! ✨" – it's personal, friendly, no "best sister".
-    -->
-
-    <!-- also I kept the original star, balloon, and cake design, just improved photo and text. -->
 </body>
 </html>
