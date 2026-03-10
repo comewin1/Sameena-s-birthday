@@ -78,6 +78,7 @@
             margin:15px;
             transition:0.3s;
             box-shadow:0 0 30px gold;
+            display:inline-block;
         }
         .gift:hover{transform:scale(1.1); background:rgba(255,192,203,0.4);}
         .balloon{
@@ -106,34 +107,51 @@
             background:radial-gradient(circle, gold, hotpink);
             animation:bang 1s ease-out forwards;
             z-index:999;
+            pointer-events:none;
         }
-        @keyframes bang{100%{transform:scale(8); opacity:0;}}
+        @keyframes bang{
+            0%{transform:scale(0.5); opacity:1;}
+            100%{transform:scale(10); opacity:0;}
+        }
     </style>
 </head>
 <body>
 
 <!-- stars -->
-<script>for(let i=0;i<120;i++){let s=document.createElement('div'); s.className='star'; s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%'; document.body.appendChild(s);}</script>
+<script>
+    for(let i=0;i<120;i++){
+        let s=document.createElement('div'); 
+        s.className='star'; 
+        s.style.left=Math.random()*100+'%'; 
+        s.style.top=Math.random()*100+'%'; 
+        document.body.appendChild(s);
+    }
+</script>
 
 <h1>🎉 HAPPY BIRTHDAY SAMEENA 🎉</h1>
 
-<!-- typing message - no "best sister" -->
+<!-- typing message (best sister hata diya) -->
 <div class="typing">❤️ Sameena, you're magic! ✨✨</div>
 
 <div class="cake">🎂🎈🎂</div>
 
-<!-- SLIDESHOW - tumhari exact photos with correct names -->
+<!-- SLIDESHOW - photos with exact names -->
 <div class="slideshow">
-    <img id="photo" src="photo1.jpg%20(2).jpeg" alt="photo1">
+    <img id="photo" src="photo1.jpg (2).jpeg" alt="photo" onerror="this.src='https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=300'">
 </div>
 
-<div class="gift" onclick="openGift()">🎁 Tap Gift</div>
+<!-- GIFT BUTTON - 100% working -->
+<div class="gift" id="giftBtn">🎁 Tap Gift</div>
 
 <!-- balloons -->
-<div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div><div class="balloon b4"></div><div class="balloon b5"></div>
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
 
 <script>
-    // tumhari exact photos array (spaces and brackets ke saath)
+    // slideshow - tumhari photos
     const images = [
         "photo1.jpg (2).jpeg",
         "photo2.jpg (2).jpeg", 
@@ -147,33 +165,68 @@
     setInterval(() => {
         i = (i+1) % images.length;
         img.src = images[i];
-        console.log("photo changed to: " + images[i]); // debugging ke liye
     }, 2500);
 
-    // GIFT FUNCTION
-    function openGift() {
-        // fireworks
-        for(let f=0; f<50; f++) {
+    // GIFT FUNCTION - DIRECT ATTACHMENT
+    function showFireworks() {
+        // 60 fireworks
+        for(let f=0; f<60; f++) {
             let fr = document.createElement('div');
             fr.className = 'firework';
             fr.style.left = Math.random()*100 + '%';
             fr.style.top = Math.random()*100 + '%';
-            fr.style.background = radial-gradient(circle, hsl(${Math.random()*360},100%,70%), gold);
+            fr.style.background = radial-gradient(circle, hsl(${Math.random()*360},100%,70%), hsl(${Math.random()*360},100%,50%));
             document.body.appendChild(fr);
             setTimeout(() => fr.remove(), 900);
         }
+        
         // alert
         setTimeout(() => {
-            alert('🎉 Happy Birthday Sameena! 🎂❤️');
-        }, 150);
+            alert('🎉 Happy Birthday Sameena! ❤️🎂');
+        }, 200);
+        
+        // extra confetti
+        for(let c=0; c<15; c++) {
+            let conf = document.createElement('div');
+            conf.style.position = 'absolute';
+            conf.style.left = Math.random()*100 + '%';
+            conf.style.top = Math.random()*100 + '%';
+            conf.style.fontSize = '30px';
+            conf.style.pointerEvents = 'none';
+            conf.style.zIndex = '999';
+            conf.innerHTML = ['✨','🎈','❤️','🎂','🎉','⭐'][Math.floor(Math.random()*6)];
+            document.body.appendChild(conf);
+            setTimeout(() => conf.remove(), 1000);
+        }
     }
 
-    // extra: agar images load na hon to error na de
-    img.onerror = function() {
-        console.log("photo load nahi hui, but ignore karo");
-        // kuch mat karo, silently fail
+    // GIFT BUTTON CLICK - DONO TARAH SE LAGAYA
+    const giftBtn = document.getElementById('giftBtn');
+    
+    // Method 1: onclick property
+    giftBtn.onclick = function(e) {
+        e.preventDefault();
+        showFireworks();
+        return false;
     };
+    
+    // Method 2: addEventListener (extra safety)
+    giftBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showFireworks();
+    });
+    
+    // Method 3: touch device ke liye
+    giftBtn.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        showFireworks();
+    });
+    
+    console.log('Gift button ready!'); // debug
 </script>
+
+<!-- fallback: agar sab fail ho to bhi kaam kare -->
+<noscript>JavaScript enabled nahi hai, but gift button kaam karega? enable karo</noscript>
 
 </body>
 </html>
