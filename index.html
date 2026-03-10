@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sameena 🎉</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background:linear-gradient(180deg,#0f0026,#2b0057);
+color:white;
+overflow:hidden;
+}
+
+/* stars */
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.2}
+to{opacity:1}
+}
+
+/* heading */
+
+h1{
+margin-top:60px;
+font-size:55px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 30px pink;}
+}
+
+/* typing message */
+
+.typing{
+font-size:24px;
+border-right:3px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+margin:auto;
+animation:typing 5s steps(40,end) forwards, blink .8s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:420px}
+}
+
+@keyframes blink{
+50%{border-color:transparent}
+}
+
+/* cake */
+
+.cake{
+font-size:90px;
+margin-top:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+}
+
+/* balloons */
+
+.balloon{
+position:absolute;
+bottom:-120px;
+width:60px;
+height:80px;
+border-radius:50%;
+animation:float 8s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-120vh)}
+}
+
+.b1{left:10%;background:red;}
+.b2{left:25%;background:blue;}
+.b3{left:40%;background:yellow;}
+.b4{left:60%;background:green;}
+.b5{left:80%;background:pink;}
+
+/* slideshow */
+
+.slideshow img{
+width:260px;
+height:260px;
+border-radius:20px;
+margin-top:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* gift box */
+
+.gift{
+font-size:50px;
+cursor:pointer;
+margin-top:20px;
+}
+
+/* fireworks */
+
+.firework{
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+0%{transform:scale(1)}
+100%{transform:scale(9);opacity:0}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday Sameena 🎉</h1>
+
+<div class="typing">
+You are the best sister ever ❤️
+</div>
+
+<div class="cake">🎂</div>
+
+<div class="slideshow">
+<img id="photo" src="photo1.jpg(2).jpeg">
+</div>
+
+<div class="gift" onclick="openGift()">🎁 Tap Gift</div>
+
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
+
+<script>
+
+/* stars */
+
+for(let i=0;i<100;i++){
+let star=document.createElement("div");
+star.className="star";
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+document.body.appendChild(star);
+}
+
+/* slideshow */
+
+let images=[
+"photo1.jpg(2).jpeg",
+"photo2.jpg(2).jpeg",
+"photo3.jpg(2).jpeg"
+];
+
+let i=0;
+
+setInterval(()=>{
+i=(i+1)%images.length;
+document.getElementById("photo").src=images[i];
+},2500);
+
+/* fireworks */
+
+function openGift(){
+
+for(let i=0;i<40;i++){
+
+let fw=document.createElement("div");
+
+fw.className="firework";
+
+fw.style.left=Math.random()*100+"%";
+fw.style.top=Math.random()*100+"%";
+
+document.body.appendChild(fw);
+
+setTimeout(()=>fw.remove(),1000);
+
+}
+
+alert("🎉 Surprise! Happy Birthday Sameena! ❤️🎂");
+
+}
+
+</script>
+
+</body>
+</html>
