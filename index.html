@@ -1,232 +1,686 @@
+[2:30 PM, 5/29/2026] Aaminaaaaaa💌: “Elegance In Every Design”
+Tagline
+[2:31 PM, 5/29/2026] Aaminaaaaaa💌: “Beauty Begins With Henora”
+[6:38 PM, 5/29/2026] Aaminaaaaaa💌: Here is a complete, professional birthday wishes website for Sameena.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Happy Birthday Sameena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Happy Birthday Sameena | Celebrating You</title>
+    <!-- Google Fonts for elegant typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        *{margin:0; padding:0; box-sizing:border-box;}
-        body{
-            background:linear-gradient(145deg,#0a0017,#2b0057);
-            min-height:100vh;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            font-family:'Segoe UI',sans-serif;
-            color:white;
-            overflow-x:hidden;
-            padding:20px;
-            position:relative;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .star{
-            position:absolute;
-            width:3px; height:3px;
-            background:white;
-            border-radius:50%;
-            animation:twinkle 2s infinite alternate;
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #fdf8f0 0%, #fff5e8 100%);
+            color: #2c1810;
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
-        @keyframes twinkle{from{opacity:0.2;} to{opacity:1;}}
-        h1{
-            font-size:4rem;
-            text-align:center;
-            background:linear-gradient(45deg,#ffe6b0,#ffb6c1);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-            filter:drop-shadow(0 0 20px #ff69b4);
-            margin-bottom:10px;
+
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .typing{
-            font-size:2rem;
-            border-right:3px solid white;
-            white-space:nowrap;
-            overflow:hidden;
-            width:0;
-            margin:20px auto;
-            animation:typing 4s steps(25,end) forwards, blink 1s infinite;
+        ::-webkit-scrollbar-track {
+            background: #f5e6d3;
         }
-        @keyframes typing{to{width:320px;}}
-        @keyframes blink{50%{border-color:transparent;}}
-        .cake{
-            font-size:6rem;
-            filter:drop-shadow(0 10px 20px gold);
-            animation:bounce 2s infinite;
-            margin:10px 0;
+        ::-webkit-scrollbar-thumb {
+            background: #d4a373;
+            border-radius: 12px;
         }
-        @keyframes bounce{0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);}}
-        .slideshow{
-            width:260px;
-            height:260px;
-            border-radius:30px;
-            border:4px solid gold;
-            box-shadow:0 0 50px #ff00c8;
-            overflow:hidden;
-            margin:15px;
+
+        /* navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 248, 240, 0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
         }
-        .slideshow img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .gift{
-            font-size:4rem;
-            cursor:pointer;
-            background:rgba(255,215,0,0.2);
-            padding:10px 30px;
-            border-radius:60px;
-            border:2px solid pink;
-            margin:15px;
-            transition:0.3s;
-            box-shadow:0 0 30px gold;
-            display:inline-block;
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #b5651e, #e09d5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
         }
-        .gift:hover{transform:scale(1.1); background:rgba(255,192,203,0.4);}
-        .balloon{
-            position:absolute;
-            bottom:-150px;
-            width:60px; height:90px;
-            border-radius:50%;
-            opacity:0.8;
-            animation:float 8s linear infinite;
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
         }
-        .balloon::after{
-            content:''; position:absolute;
-            width:2px; height:70px;
-            background:rgba(255,255,255,0.3);
-            bottom:-70px; left:29px;
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #5a3e2b;
+            transition: 0.3s;
+            font-size: 1rem;
+            position: relative;
         }
-        @keyframes float{100%{transform:translateY(-140vh);}}
-        .b1{left:5%; background:#ff4d6d;}
-        .b2{left:25%; background:#4d9fff;}
-        .b3{left:45%; background:#ffdb4d;}
-        .b4{left:65%; background:#85e085;}
-        .b5{left:85%; background:#ff99ff;}
-        .firework{
-            position:absolute; width:8px; height:8px;
-            border-radius:50%;
-            background:radial-gradient(circle, gold, hotpink);
-            animation:bang 1s ease-out forwards;
-            z-index:999;
-            pointer-events:none;
+
+        .nav-links a:hover {
+            color: #c57c3a;
         }
-        @keyframes bang{
-            0%{transform:scale(0.5); opacity:1;}
-            100%{transform:scale(10); opacity:0;}
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #d48c54;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* sections general */
+        section {
+            padding: 100px 24px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            background: radial-gradient(circle at 10% 30%, rgba(255,235,215,0.5), transparent);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #b45a2b;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content .birthday-name {
+            font-size: 3rem;
+            background: linear-gradient(120deg, #c26e3a, #f3b27a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0.5rem 0;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: #7e5a3f;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            animation: fadeInUp 1s 0.1s both;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            animation: fadeInUp 1s 0.2s both;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f2d5b5;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #5e3a22;
+            transition: all 0.3s;
+            border: 1px solid #ebc9a4;
+            backdrop-filter: blur(2px);
+        }
+
+        .btn-primary {
+            background: #c47a44;
+            color: white;
+            border: none;
+            box-shadow: 0 5px 12px rgba(196,122,68,0.3);
+        }
+
+        .btn-primary:hover {
+            background: #a85e2c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(168,94,44,0.35);
+        }
+
+        .btn-outline:hover {
+            background: #e7cfb7;
+            transform: translateY(-2px);
+        }
+
+        /* gallery & gift cards */
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 2rem;
+            color: #b45a2b;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #e6b17e;
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 18px 35px -12px rgba(0, 0, 0, 0.12);
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 28px 40px -14px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background: #ebddcf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #b97f51;
+        }
+
+        .card-content {
+            padding: 1.6rem;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #3e2a1f;
+        }
+
+        /* wish card (interactive gift) */
+        .gift-section {
+            background: linear-gradient(125deg, #fff7ed, #fff0e0);
+            border-radius: 64px;
+            margin: 40px auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+        }
+
+        .gift-card {
+            max-width: 550px;
+            margin: 0 auto;
+            background: rgba(255,255,245,0.7);
+            border-radius: 48px;
+            padding: 2rem;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(210, 150, 90, 0.3);
+        }
+
+        .gift-icon {
+            font-size: 4rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        .gift-icon:hover {
+            transform: scale(1.1);
+        }
+
+        #surpriseMessage {
+            font-size: 1.2rem;
+            margin: 1.2rem 0;
+            font-weight: 500;
+            color: #aa6f44;
+            min-height: 80px;
+            transition: all 0.3s;
+        }
+
+        .surprise-btn {
+            background: #d9955f;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        /* wishes section */
+        .wishes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .wish-item {
+            background: white;
+            border-radius: 40px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 10px solid #e6b17e;
+            transition: 0.2s;
+        }
+
+        .wish-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #2f241b;
+        }
+
+        .wish-author {
+            margin-top: 0.8rem;
+            font-weight: 600;
+            color: #c48349;
+        }
+
+        /* contact / final note */
+        .contact-block {
+            text-align: center;
+            background: #fef3e6;
+            border-radius: 48px;
+            padding: 3rem 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            font-size: 2rem;
+        }
+
+        .social-icons a {
+            color: #b97f51;
+            transition: 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #dc8e4a;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #947a62;
+            border-top: 1px solid #eedbcb;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content .birthday-name {
+                font-size: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-links {
+                gap: 1.2rem;
+            }
+            section {
+                padding: 90px 20px 60px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* floating balloons effect (soft) */
+        .balloon {
+            position: fixed;
+            bottom: -80px;
+            font-size: 2rem;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 0;
+            animation: floatUp 14s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(20deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- stars -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">🎈 Sameena's Day</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Moments</a></li>
+            <li><a href="#gift">Tap Gift</a></li>
+            <li><a href="#wishes">Wishes</a></li>
+            <li><a href="#contact">Love</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero / Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Happy Birthday</h1>
+            <div class="birthday-name">🎂 Sameena 🎂</div>
+            <p>You light up every room with your grace and smile. Today, the world celebrates YOU — radiant, irreplaceable, and deeply loved.</p>
+            <div class="btn-group">
+                <a href="#gift" class="btn btn-primary"><i class="fas fa-gift"></i> Tap Your Gift</a>
+                <a href="#wishes" class="btn btn-outline"><i class="fas fa-heart"></i> Read Wishes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Moments (visual tribute) -->
+    <section id="gallery">
+        <h2 class="section-title">✨ Beautiful Moments ✨</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="card-img"><i class="fas fa-sun fa-3x"></i></div>
+                <div class="card-content">
+                    <h3>Radiant Smile</h3>
+                    <p>Your joy is infectious, Sameena. Keep shining like the morning sun.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="card-img"><i class="fas fa-crown fa-3x"></i></div>
+                <div class="card-content">
+                    <h3>Queen Energy</h3>
+                    <p>Elegant, strong, and graceful — that's the magic you bring.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="card-img"><i class="fas fa-champagne-glasses fa-3x"></i></div>
+                <div class="card-content">
+                    <h3>Celebration Vibe</h3>
+                    <p>Cheers to you and another year of beautiful adventures!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Gift + surprise "Tap Gift" Section -->
+    <section id="gift">
+        <div class="gift-section">
+            <div class="gift-card">
+                <div class="gift-icon" id="giftBox">
+                    <i class="fas fa-gift fa-4x" style="color:#dc8e4a;"></i>
+                </div>
+                <h3 style="margin: 0.8rem 0; color:#ab6f41;">✨ Tap The Gift ✨</h3>
+                <div id="surpriseMessage">
+                    <p style="font-size:1rem;">🎁 Waiting for you to open ... click the gift box! 🎁</p>
+                </div>
+                <button id="surpriseButton" class="surprise-btn"><i class="fas fa-star"></i> Open Surprise</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heartfelt Wishes from friends & family (pre-written but personal) -->
+    <section id="wishes">
+        <h2 class="section-title">💌 Birthday Wishes for Sameena 💌</h2>
+        <div class="wishes-container">
+            <div class="wish-item">
+                <div class="wish-text">“Happy Birthday, Sameena! Your kindness is a rare gift. May your year be filled with laughter, travel, and everything you’ve dreamed of.”</div>
+                <div class="wish-author">— With love, Sarah & Family</div>
+            </div>
+            <div class="wish-item">
+                <div class="wish-text">“To the most wonderful soul — Sameena, you make life brighter. Keep dancing to your own rhythm. So much love on your special day!”</div>
+                <div class="wish-author">— Your forever friend, Priya</div>
+            </div>
+            <div class="wish-item">
+                <div class="wish-text">“Sameena, celebrating you is the best part of this year. You’re strength wrapped in grace. Wishing you endless joy and sweet surprises.”</div>
+                <div class="wish-author">— From all of us, The Creative Crew</div>
+            </div>
+            <div class="wish-item">
+                <div class="wish-text">“Happy Birthday to the one who makes ordinary days magical. May your heart be as full as the love you give. Cheers, Sameena!”</div>
+                <div class="wish-author">— Deepak & Anjali</div>
+            </div>
+        </div>
+        <!-- additional note -->
+        <div style="text-align:center; margin-top: 2rem;">
+            <i class="fas fa-birthday-cake" style="font-size: 2rem; color:#ce8a53;"></i>
+            <p style="margin-top: 12px;">You deserve the world, Sameena. Enjoy every moment of your celebration!</p>
+        </div>
+    </section>
+
+    <!-- Contact / Connect section with love -->
+    <section id="contact">
+        <div class="contact-block">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">📸 Stay Connected</h2>
+            <p style="margin-bottom: 1rem; max-width:500px; margin-left:auto; margin-right:auto;">Share your birthday joy and tag your memories. You're always in our hearts!</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Heart"><i class="fas fa-heart"></i></a>
+                <a href="#" aria-label="Envelope"><i class="far fa-envelope"></i></a>
+            </div>
+            <div style="margin-top: 2rem;">
+                <p><i class="fas fa-map-marker-alt"></i> Celebrating worldwide — but our wishes fly to you, Sameena!</p>
+                <p style="margin-top: 12px;"><i class="far fa-calendar-alt"></i> 29th May — your shine never fades.</p>
+            </div>
+            <a href="#home" class="btn btn-primary" style="margin-top: 2rem; display:inline-block;"><i class="fas fa-arrow-up"></i> Back to top</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>🎈 With endless love and happiness — Happy Birthday Sameena 🎈</p>
+    <p style="margin-top: 8px;">Designed with care • Celebrating the beautiful soul you are • 29 May</p>
+</footer>
+
+<!-- balloon generator (decoration) -->
 <script>
-    for(let i=0;i<120;i++){
-        let s=document.createElement('div'); 
-        s.className='star'; 
-        s.style.left=Math.random()*100+'%'; 
-        s.style.top=Math.random()*100+'%'; 
-        document.body.appendChild(s);
-    }
-</script>
-
-<h1>🎉 HAPPY BIRTHDAY SAMEENA 🎉</h1>
-
-<!-- typing message (best sister hata diya) -->
-<div class="typing">❤️ Sameena, you're magic! ✨✨</div>
-
-<div class="cake">🎂🎈🎂</div>
-
-<!-- SLIDESHOW - photos with exact names -->
-<div class="slideshow">
-    <img id="photo" src="photo1.jpg (2).jpeg" alt="photo" onerror="this.src='https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=300'">
-</div>
-
-<!-- GIFT BUTTON - 100% working -->
-<div class="gift" id="giftBtn">🎁 Tap Gift</div>
-
-<!-- balloons -->
-<div class="balloon b1"></div>
-<div class="balloon b2"></div>
-<div class="balloon b3"></div>
-<div class="balloon b4"></div>
-<div class="balloon b5"></div>
-
-<script>
-    // slideshow - tumhari photos
-    const images = [
-        "photo1.jpg (2).jpeg",
-        "photo2.jpg (2).jpeg", 
-        "photo3.jpg (2).jpeg"
-    ];
-
-    let i=0;
-    const img = document.getElementById('photo');
-    
-    // har 2.5 sec mein photo badlega
-    setInterval(() => {
-        i = (i+1) % images.length;
-        img.src = images[i];
-    }, 2500);
-
-    // GIFT FUNCTION - DIRECT ATTACHMENT
-    function showFireworks() {
-        // 60 fireworks
-        for(let f=0; f<60; f++) {
-            let fr = document.createElement('div');
-            fr.className = 'firework';
-            fr.style.left = Math.random()*100 + '%';
-            fr.style.top = Math.random()*100 + '%';
-            fr.style.background = radial-gradient(circle, hsl(${Math.random()*360},100%,70%), hsl(${Math.random()*360},100%,50%));
-            document.body.appendChild(fr);
-            setTimeout(() => fr.remove(), 900);
-        }
-        
-        // alert
+    // Create floating balloons for festive background
+    function createBalloon() {
+        const balloon = document.createElement('div');
+        balloon.classList.add('balloon');
+        const icons = ['🎈', '🎂', '🎉', '✨', '🎁', '🌸', '🕯️'];
+        balloon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+        balloon.style.left = Math.random() * 100 + '%';
+        balloon.style.fontSize = Math.random() * 1.8 + 1.2 + 'rem';
+        balloon.style.animationDuration = 8 + Math.random() * 8 + 's';
+        balloon.style.animationDelay = Math.random() * 5 + 's';
+        document.body.appendChild(balloon);
         setTimeout(() => {
-            alert('🎉 Happy Birthday Sameena! ❤️🎂');
-        }, 200);
-        
-        // extra confetti
-        for(let c=0; c<15; c++) {
-            let conf = document.createElement('div');
-            conf.style.position = 'absolute';
-            conf.style.left = Math.random()*100 + '%';
-            conf.style.top = Math.random()*100 + '%';
-            conf.style.fontSize = '30px';
+            balloon.remove();
+        }, 15000);
+    }
+    setInterval(createBalloon, 2500);
+</script>
+
+<script>
+    // Gift Section interactive surprise (Tap Gift)
+    const giftBoxIcon = document.getElementById('giftBox');
+    const surpriseBtn = document.getElementById('surpriseButton');
+    const surpriseMsgDiv = document.getElementById('surpriseMessage');
+
+    // array of beautiful birthday messages for Sameena
+    const surpriseMessages = [
+        "🎉💖 HAPPY BIRTHDAY SAMEENA! 💖🎉 You're a masterpiece of kindness and joy. May your day be as beautiful as you are!",
+        "🍰✨ Surprise! ✨🍰 Wishing you laughter, cake, and moments that take your breath away. You deserve the whole universe!",
+        "🎈🌸 Sameena, you're MAGIC! 🌸🎈 May every candle on your cake light up a dream come true. Shine on!",
+        "💎🌟 The world is brighter with you in it. Stay fearless, fabulous and fantastic — Love you loads! 🌟💎",
+        let clickCount = 0;
+
+    function showRandomSurprise() {
+        const randomIndex = Math.floor(Math.random() * surpriseMessages.length);
+        surpriseMsgDiv.innerHTML = <p style="font-size:1.2rem; font-weight:500; background: #fff0e0; border-radius: 40px; padding: 16px; animation: fadeInUp 0.3s;">✨ ${surpriseMessages[randomIndex]} ✨</p>;
+        // also add small confetti effect (just fun)
+        createConfettiEffect();
+    }
+
+    // optional mini confetti effect for gift opening
+    function createConfettiEffect() {
+        const confettiCount = 25;
+        for (let i = 0; i < confettiCount; i++) {
+            const conf = document.createElement('div');
+            conf.style.position = 'fixed';
+            conf.style.width = '8px';
+            conf.style.height = '8px';
+            conf.style.backgroundColor = hsl(${Math.random() * 360}, 80%, 60%);
+            conf.style.left = Math.random() * window.innerWidth + 'px';
+            conf.style.top = '0px';
+            conf.style.borderRadius = '50%';
             conf.style.pointerEvents = 'none';
-            conf.style.zIndex = '999';
-            conf.innerHTML = ['✨','🎈','❤️','🎂','🎉','⭐'][Math.floor(Math.random()*6)];
+            conf.style.zIndex = '9999';
+            conf.style.opacity = '0.8';
             document.body.appendChild(conf);
-            setTimeout(() => conf.remove(), 1000);
+            let pos = 0;
+            const fall = setInterval(() => {
+                if (pos > window.innerHeight) {
+                    clearInterval(fall);
+                    conf.remove();
+                } else {
+                    pos += 5;
+                    conf.style.top = pos + 'px';
+                    conf.style.left = (parseFloat(conf.style.left) + (Math.random() - 0.5) * 3) + 'px';
+                }
+            }, 16);
+            setTimeout(() => {
+                clearInterval(fall);
+                if(conf) conf.remove();
+            }, 2000);
         }
     }
 
-    // GIFT BUTTON CLICK - DONO TARAH SE LAGAYA
-    const giftBtn = document.getElementById('giftBtn');
-    
-    // Method 1: onclick property
-    giftBtn.onclick = function(e) {
-        e.preventDefault();
-        showFireworks();
-        return false;
-    };
-    
-    // Method 2: addEventListener (extra safety)
-    giftBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showFireworks();
+    // Event listeners: Gift box click & button click
+    giftBoxIcon.addEventListener('click', () => {
+        showRandomSurprise();
+        // animate gift box
+        giftBoxIcon.style.transform = 'scale(1.15)';
+        setTimeout(() => { giftBoxIcon.style.transform = 'scale(1)'; }, 200);
     });
-    
-    // Method 3: touch device ke liye
-    giftBtn.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        showFireworks();
+
+    surpriseBtn.addEventListener('click', () => {
+        showRandomSurprise();
+        surpriseBtn.innerHTML = '<i class="fas fa-gift"></i> Another Wish? 🎁';
+        // subtle bounce effect
+        surpriseBtn.style.transform = 'scale(0.98)';
+        setTimeout(() => { surpriseBtn.style.transform = 'scale(1)'; }, 120);
     });
+
+    // also initial friendly greeting
+    setTimeout(() => {
+        if(surpriseMsgDiv) {
+            surpriseMsgDiv.innerHTML = <p style="font-size:1rem;">🎀 Sameena, tap the gift or click 'Open Surprise' — we have special messages just for you! 🎀</p>;
+        }
+    }, 500);
     
-    console.log('Gift button ready!'); // debug
+    // Smooth scrolling for nav links
+    document.querySelectorAll('.nav-links a, .btn-group a, .btn-primary[href="#home"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+
+    // small sticky navbar effect on scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 60) {
+            navbar.style.background = 'rgba(255, 248, 240, 0.98)';
+            navbar.style.boxShadow = '0 6px 20px rgba(0,0,0,0.08)';
+        } else {
+            navbar.style.background = 'rgba(255, 248, 240, 0.96)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
+        }
+    });
 </script>
-
-<!-- fallback: agar sab fail ho to bhi kaam kare -->
-<noscript>JavaScript enabled nahi hai, but gift button kaam karega? enable karo</noscript>
-
 </body>
 </html>
+```
+        "🎁🎊 TAP! TAP! A special birthday hug from across the miles 🤗🎊 Enjoy your incredible day, Sameena!"
+    ];
